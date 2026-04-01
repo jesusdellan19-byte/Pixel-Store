@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP STORE</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b0b0b, #000);
+  color: white;
+}
+
+/* HEADER */
+header {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+  color: gold;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255,215,0,0.3);
+}
+
+/* CONTENEDOR */
+.container {
+  padding: 15px;
+}
+
+/* SECCIONES */
+.section {
+  background: #141414;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.section-header {
+  padding: 15px;
+  font-size: 18px;
+  color: gold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CONTENIDO */
+.section-content {
+  display: none;
+  padding: 10px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* JUEGOS */
+.game {
+  background: #1d1d1d;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* PAQUETES */
+.packages {
+  display: none;
+  margin-top: 10px;
+}
+
+.package {
+  background: #262626;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BOTONES */
+.btn {
+  padding: 6px 10px;
+  background: gold;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(-8px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>VIP STORE</header>
+
+<div class="container">
+
+<!-- RECARGAS -->
+<div class="section">
+<div class="section-header" onclick="toggleSection(this)">
+🎮 Recargas <span>▼</span>
+</div>
+
+<div class="section-content">
+
+<!-- FREE FIRE -->
+<div class="game">
+<div class="game-header" onclick="toggleGame(this)">
+Free Fire <span>+</span>
+</div>
+
+<div class="packages">
+
+<div class="package">
+100 Diamantes - $1
+<a class="btn" href="https://wa.me/584249561560?text=100 diamantes Free Fire">Comprar</a>
+</div>
+
+<div class="package">
+310 Diamantes - $3
+<a class="btn" href="https://wa.me/584249561560?text=310 diamantes Free Fire">Comprar</a>
+</div>
+
+<div class="package">
+520 Diamantes - $5
+<a class="btn" href="https://wa.me/584249561560?text=520 diamantes Free Fire">Comprar</a>
+</div>
+
+</div>
+</div>
+
+<!-- COD -->
+<div class="game">
+<div class="game-header" onclick="toggleGame(this)">
+Call of Duty <span>+</span>
+</div>
+
+<div class="packages">
+
+<div class="package">
+80 CP - $1
+<a class="btn" href="https://wa.me/584249561560?text=80 CP COD">Comprar</a>
+</div>
+
+<div class="package">
+420 CP - $5
+<a class="btn" href="https://wa.me/584249561560?text=420 CP COD">Comprar</a>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/584249561560">💬</a>
+
+<script>
+function toggleSection(el){
+  let content = el.nextElementSibling;
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function toggleGame(el){
+  let content = el.nextElementSibling;
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
